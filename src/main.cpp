@@ -104,9 +104,9 @@ void loop() {
             // Output to Serial Monitor
             Serial.println("CO2 concentration exceeds 900 ppm!");
 
-            // Output to M5.Lcd
+            // Warning if exceeding 900 ppm.
             M5.Lcd.fillScreen(TFT_BLACK);
-            M5.Lcd.setTextColor(TFT_RED);  // Change text color to red
+            M5.Lcd.setTextColor(TFT_RED); 
             M5.Lcd.setTextSize(2);
             M5.Lcd.setCursor(0, 0);
             M5.Lcd.print("CO2 Concentration:");
@@ -114,7 +114,11 @@ void loop() {
             M5.Lcd.setTextSize(4);
             M5.Lcd.print(co2);
             M5.Lcd.print(" ppm");
+            M5.Lcd.setCursor(0, 90);
+            M5.Lcd.setTextSize(2);
+            M5.Lcd.print("Let's get some fresh air!");
         } else {
+            // Usually draws an avatar.
             avatar.init();
         }
     }
