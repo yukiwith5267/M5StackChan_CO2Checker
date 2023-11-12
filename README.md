@@ -1,8 +1,10 @@
 # M5StackChan_CO2Checker
 
-### 部屋の換気はだいじ。
-
 M5stackでCO2濃度を測定し、一定値を超えたら部屋の換気を促してくれるロボット。
+
+900ppmを超えると警告文を表示します。
+
+![altテキスト](images/image.png)
 
 ---
 
